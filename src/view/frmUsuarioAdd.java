@@ -4,6 +4,7 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
 import static view.frmPrincipal.centerForm;
 import static view.frmPrincipal.dpEscritorio;
 import static view.frmPrincipal.showForm;
@@ -42,8 +43,8 @@ public class frmUsuarioAdd extends javax.swing.JInternalFrame {
         txtNombres1 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
-        btnAgregar2 = new javax.swing.JButton();
-        btnAgregar3 = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -134,23 +135,23 @@ public class frmUsuarioAdd extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        btnAgregar2.setBackground(new java.awt.Color(247, 247, 247));
-        btnAgregar2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnAgregar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/add-32x32.png"))); // NOI18N
-        btnAgregar2.setText("   Guardar (F5)");
-        btnAgregar2.addActionListener(new java.awt.event.ActionListener() {
+        btnGuardar.setBackground(new java.awt.Color(247, 247, 247));
+        btnGuardar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/add-32x32.png"))); // NOI18N
+        btnGuardar.setText("   Guardar (F5)");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregar2ActionPerformed(evt);
+                btnGuardarActionPerformed(evt);
             }
         });
 
-        btnAgregar3.setBackground(new java.awt.Color(247, 247, 247));
-        btnAgregar3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnAgregar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/cancel-32x32.png"))); // NOI18N
-        btnAgregar3.setText("   Cancelar");
-        btnAgregar3.addActionListener(new java.awt.event.ActionListener() {
+        btnCancelar.setBackground(new java.awt.Color(247, 247, 247));
+        btnCancelar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/cancel-32x32.png"))); // NOI18N
+        btnCancelar.setText("   Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregar3ActionPerformed(evt);
+                btnCancelarActionPerformed(evt);
             }
         });
 
@@ -171,9 +172,9 @@ public class frmUsuarioAdd extends javax.swing.JInternalFrame {
                             .addComponent(jLabel2)
                             .addComponent(jLabel3)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnAgregar2, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnAgregar3, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -191,8 +192,8 @@ public class frmUsuarioAdd extends javax.swing.JInternalFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAgregar2)
-                    .addComponent(btnAgregar3))
+                    .addComponent(btnGuardar)
+                    .addComponent(btnCancelar))
                 .addGap(0, 8, Short.MAX_VALUE))
         );
 
@@ -210,7 +211,11 @@ public class frmUsuarioAdd extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAgregar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregar2ActionPerformed
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        if(txtNombres.getText()=="") {
+            JOptionPane.showMessageDialog(null, "Ingrese nombres del usuario");
+            return;
+        }
         frmUsuarioAdd frm = new frmUsuarioAdd();
         if (showForm(frm)) {
             dpEscritorio.add(frm);
@@ -218,18 +223,16 @@ public class frmUsuarioAdd extends javax.swing.JInternalFrame {
             frm.setVisible(true);
         }
         frm.toFront();
-    }//GEN-LAST:event_btnAgregar2ActionPerformed
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
-    private void btnAgregar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregar3ActionPerformed
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAgregar3ActionPerformed
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAgregar;
-    private javax.swing.JButton btnAgregar1;
-    private javax.swing.JButton btnAgregar2;
-    private javax.swing.JButton btnAgregar3;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnGuardar;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
