@@ -4,6 +4,7 @@
  */
 package view;
 
+import controller.Controlador;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -179,8 +180,9 @@ public class frmPrincipal extends javax.swing.JFrame {
 
     private void btnUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuariosActionPerformed
         frmUsuarioList frm = new frmUsuarioList();
-
+       
         if (showForm(frm)) {
+            Controlador c = new Controlador(frm);
             dpEscritorio.add(frm);
             centerForm(frm);
             frm.setVisible(true);

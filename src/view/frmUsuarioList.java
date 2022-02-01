@@ -112,7 +112,6 @@ public class frmUsuarioList extends javax.swing.JInternalFrame {
         tLista.setGridColor(new java.awt.Color(247, 247, 247));
         tLista.setSelectionForeground(new java.awt.Color(247, 247, 247));
         tLista.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        tLista.setShowGrid(false);
         tLista.getTableHeader().setResizingAllowed(false);
         tLista.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tLista);
@@ -189,12 +188,12 @@ public class frmUsuarioList extends javax.swing.JInternalFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAgregar;
-    private javax.swing.JButton btnBuscar;
-    private javax.swing.JButton btnEliminar;
-    private javax.swing.JButton btnEstado;
-    private javax.swing.JButton btnImprimir;
-    private javax.swing.JButton btnModificar;
+    public javax.swing.JButton btnAgregar;
+    public javax.swing.JButton btnBuscar;
+    public javax.swing.JButton btnEliminar;
+    public javax.swing.JButton btnEstado;
+    public javax.swing.JButton btnImprimir;
+    public javax.swing.JButton btnModificar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
